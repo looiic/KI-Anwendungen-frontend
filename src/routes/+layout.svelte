@@ -19,6 +19,9 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item">
+            <a class="nav-link" href="/apartment">Apartment Regression</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="/house">House Regression</a>
           </li>
           <li class="nav-item">
