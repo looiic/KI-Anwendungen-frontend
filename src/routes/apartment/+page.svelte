@@ -113,6 +113,7 @@
 	let area;
 	let price = '...'
 	let selected;
+	let description_len;
 	function handleSubmit() {
 		let url =
             PUBLIC_BASE_URL +
@@ -121,7 +122,9 @@
             "&area=" +
             area +
             "&rooms=" +
-            rooms;
+            rooms +
+			"&description_len=" +
+			description_len;
         console.log(url);
         axios.get(url).then((response) => {
             price = 'CHF ' + response.data;
@@ -148,6 +151,9 @@
 				</option>
 			{/each}
 		</select>
+	  </div>
+	  <div class="col col-lg-2">
+		<input type="number" class="form-control" placeholder="Description length" aria-label="description_len" bind:value={description_len}>
 	  </div>
 	  <div class="col-md-auto">
 		<button type="button" class="btn btn-primary" on:click={handleSubmit}>price estimation</button>
